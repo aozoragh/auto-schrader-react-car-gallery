@@ -5,7 +5,7 @@ export const CarContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 427px;
+  width: 100%;
   height: 538px;
   background-color: #fafafa;
   border: 1px solid #cfcfcf;
@@ -14,8 +14,10 @@ export const CarContainer = styled.div`
 
 export const ImageArea = styled.div`
   width: 100%;
-  height: 266px;
-  background: url("/assets/images/car.png");
+  height: 246px;
+  background: url("/assets/images/car.png") no-repeat;
+  background-size: cover;
+  background-position: center;
   position: relative;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -29,12 +31,15 @@ export const ImageArea = styled.div`
 
 export const Content = styled.div`
   width: 100%;
+  height: 292px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 11px;
-  padding: 27px;
+  padding: 16px;
+  /* @media screen and (max-width: 632px) {
+    padding: 16px;
+  } */
 `;
 
 export const NameAndPrice = styled.div`
