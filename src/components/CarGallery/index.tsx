@@ -66,11 +66,13 @@ const CarGallery: FC = () => {
     });
   };
   return (
-    <CarGalleryContainer>
+    <>
       <input id="csv_file" type="file" />
-      {galleryData &&
-        galleryData.map((item, index) => <Car key={index} data={item} />)}
-    </CarGalleryContainer>
+      <CarGalleryContainer>
+        {galleryData &&
+          galleryData.map((item, index) => <Car key={index} data={item} />)}
+      </CarGalleryContainer>
+    </>
   );
 };
 
